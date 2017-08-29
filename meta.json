@@ -17,9 +17,25 @@
     },
     "sass": {
        "type": "confirm",
-       "message": "Use sass?",
+       "message": "Use Sass?",
        "default": false
+    },
+    "vueRouter": {
+      "type": "confirm",
+      "message": "Use VueRouter?",
+      "default": true
+    },
+    "vuex": {
+      "type": "confirm",
+      "message": "Use Vuex?",
+      "default": true
     }
+  },
+  "filters": {
+    "src/router/**/*": "vueRouter",
+    "src/views/**/*": "vueRouter",
+    "src/store/**/*": "vuex",
+    "src/App.vue":  "!vueRouter" 
   },
   "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dev.{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev.{{/inPlace}}"
 }
